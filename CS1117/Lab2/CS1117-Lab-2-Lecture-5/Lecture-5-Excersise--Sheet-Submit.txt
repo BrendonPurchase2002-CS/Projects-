@@ -1,0 +1,93 @@
+# Script Name : rugby_world_cup.py
+# Author: Brendon Purchase 119473576
+
+# Script Name : rugby_world_cup.py
+# Author: Brendon Purchase 119473576
+ITEM 1:
+team1 = str(input("Enter the name of team 1:"))
+team2 = str(input("Enter the name of team 2:"))
+tries_for_team_1 = int(input("enter the number of tries for %s:" % (team1)))
+tries_for_team_2 = int(input("enter the number of tries for %s:" % (team2)))
+points_team_1 = int(input("Enter the number of converted/penalty for %s:" % (team1)))
+points_team_2 = int(input("Enter the number of converted/penalty for %s:" % (team2)))
+print(team1 + "\t%d" % (tries_for_team_1) + "\t%d" % (points_team_1))
+print(team2 + "\t%d" % (tries_for_team_2) + "\t%d" % (points_team_2))
+
+Enter the name of team 1:Japan
+Enter the name of team 2:Russia
+enter the number of tries for Japan:0
+enter the number of tries for Russia:2
+Enter the number of converted/penalty for Japan:12
+Enter the number of converted/penalty for Russia:9
+Japan	0	12
+Russia	2	9
+Item 3 :
+
+#24 years and 84 days = 8844
+
+player_name = input("Enter Player's Name:")
+no_days_old = int(input("Enter No. of days old:"))
+print(player_name)
+print( no_days_old // 365, 'years')
+print( no_days_old % 365, 'days')
+
+output:
+
+Enter Player's Name:bobby
+Enter No. of days old:8844
+bobby
+24 years
+84 days
+
+ITEM 4(a):
+print(60*42 + 42)
+output : 2562
+
+4(b)
+print(10/ 1.609)
+output: 6.215040397762586
+
+4(c)
+avg = 6.2 / 2562
+print(avg, "m/s")
+output:
+0.002419984387197502 m/s
+
+4(d)
+miles_per_hour=0.002419984387197502 * (60**2)
+print(miles_per_hour, "Miles per hour")
+output:
+8.711943793911008 Miles per hour
+
+Bug testing:
+departure hour should be six
+the variable faster_pace_total_sec does not exist
+
+fixed code
+'''
+If I leave my house at 6:52am and run 1 mile at an easy pace (8:15 minutes [8 minutes
+and 15 seconds] per mile), then 3 miles at tempo (7:12m per mile) and 1 mile at an easy
+pace again, what time do i get home for breakfast?
+'''
+
+departure_time_hours = 6
+departure_time_minutes = 52
+departure_time_seconds = (departure_time_hours * 3600) + \
+ (departure_time_minutes * 60)
+easy_pace_mins = 8
+easy_pace_secs = 15
+easy_pace_total_sec = (easy_pace_mins * 60) + easy_pace_secs
+faster_pace_mins = 7
+faster_pace_secs = 12
+faster_pace_total_sec = (faster_pace_mins * 60) + faster_pace_secs
+time_spent_running = (easy_pace_total_sec * 2) + (faster_pace_total_sec)
+
+time_return_home_total_secs = departure_time_seconds + time_spent_running
+time_return_home_hours = time_return_home_total_secs // 3600
+time_return_home_mins = (time_return_home_total_secs % 3600) // 60
+time_return_home_secs = (time_return_home_mins % 3600) % 60
+print(time_return_home_hours, ":",
+ time_return_home_mins, ":", time_return_home_secs, "(HH:MM:SS)")
+#answer: 07:30:06 (HH:MM:SS)
+output
+7 : 15 : 15 (HH:MM:SS)

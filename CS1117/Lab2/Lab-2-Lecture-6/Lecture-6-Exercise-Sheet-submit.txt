@@ -1,0 +1,67 @@
+# Author: Brendon Purchase 119473576
+
+# seperated_input("Phineas", "Ferb", "and", "Rock\n")
+# seperated_input =
+
+
+def seperated_inputs(s1,s2,sep_value, end_value):
+    print(s1,s2, sep=sep_value, end = end_value)
+
+seperated_inputs("Phineas", "Ferb", " and ", " Rock\n")
+seperated_inputs('doofenschmirtz', 'incorporated', ' evil ', '!!!\n')
+
+seperated_inputs('a ', 'b ', 'c ', 'd ')
+
+output:
+Phineas and Ferb Rock
+doofenschmirtz evil incorporated!!!
+a c b d
+Process finished with exit code 0
+2.
+Functions output:
+The value of __name__ is: '__main__'
+Phineas and Ferb Rock
+doofenschmirtz evil incorporated!!!
+Calling file output:
+The value of __name__ is: 'functions'
+Phineas and Ferb Rock
+doofenschmirtz evil incorporated!!!
+<function seperated_inputs at 0x7fa259353620>
+There is a code at the end of the output.
+
+
+Bug testing
+unexpected indent
+the plus was not in commas on line 19
+positional argument follows keyword argument on line 14.
+and was coming up on one line where it was never specified
+Fixed code:
+
+def seperated_input(s1, s2, my_sep, my_end):
+    print(s1, s2, sep=my_sep, end=my_end)
+
+
+# add the code here
+seperated_input("A", "B", my_sep=" and ", my_end=" and C\n")
+seperated_input("A", "B", my_end=" and C\n", my_sep=" and ")
+seperated_input("A", " B", my_end=" and C\n", my_sep=" and")
+seperated_input("A", "B", my_sep=" and ", my_end=" and C\n")
+seperated_input("A", "B", my_end=" and C\n", my_sep=" and ")
+seperated_input("A", "B", my_sep=" and ", my_end=" and C\n")
+seperated_input("8", "7", my_sep=" + ", my_end=" = 15\n")
+seperated_input(8, 7, my_sep=" + ", my_end=" = 15\n")
+seperated_input(8, 7, my_sep=" + ", my_end=" = 15\n")
+seperated_input(8, 7, my_sep=" + ", my_end=" = 15" + "\n")
+
+Output
+A and B and C
+A and B and C
+A and B and C
+A and B and C
+A and B and C
+A and B and C
+8 + 7 = 15
+8 + 7 = 15
+8 + 7 = 15
+8 + 7 = 15
+
